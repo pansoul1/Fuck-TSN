@@ -91,7 +91,7 @@
 
 ## 联系方式
 
-- GitHub：[pansoul](https://github.com/pansoul)
+- GitHub：[pansoul](https://github.com/pansoul1)
 
 ## 致谢
 
