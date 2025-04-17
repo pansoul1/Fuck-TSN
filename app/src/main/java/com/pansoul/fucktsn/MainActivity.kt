@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
         githubButton.setOnClickListener {
             // 打开GitHub链接
             val intent = android.content.Intent(android.content.Intent.ACTION_VIEW)
-            intent.data = android.net.Uri.parse("https://github.com/pansoul/FuckTSN")
+            intent.data = android.net.Uri.parse("https://github.com/pansoul/Fuck-TSN")
             startActivity(intent)
         }
     }
