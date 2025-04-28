@@ -100,4 +100,21 @@
 ## 致谢
 
 - [Xposed框架](https://github.com/rovo89/Xposed)
-- [LSPosed](https://github.com/LSPosed/LSPosed) 
+- [LSPosed](https://github.com/LSPosed/LSPosed)
+
+## 协议
+
+本项目采用 [MIT 许可证](LICENSE)。
+
+## 贡献
+
+欢迎提交Pull Request或Issue来帮助改进这个项目。
+
+## 联系方式
+
+- GitHub：[pansoul](https://github.com/pansoul1)
+
+## 致谢
+
+- [Xposed框架](https://github.com/rovo89/Xposed)
+- [LSPosed](https://github.com/LSPosed/LSPosed)

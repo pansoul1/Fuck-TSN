@@ -185,6 +185,9 @@ object HookBXStudent {
         } catch (e: Throwable) {
             XposedBridge.log("TSNHook: System.exit Hook失败 - ${e.message}")
         }
+
+        // 添加版本更新Hook
+        VersionUpdateHook.hook(lpparam)
     }
     
     // 延迟Hook加固的i0包方法
