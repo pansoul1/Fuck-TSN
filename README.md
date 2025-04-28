@@ -1,6 +1,6 @@
 # 体适能绕过模块 (FuckTSN)
 
-![版本](https://img.shields.io/badge/版本-1.0-blue)
+![版本](https://img.shields.io/badge/版本-2.0-blue)
 ![Xposed API](https://img.shields.io/badge/Xposed%20API-89-orange)
 ![LSPosed](https://img.shields.io/badge/LSPosed-支持-green)
 
@@ -13,6 +13,7 @@
 - ✅ 防止应用崩溃退出
 - ✅ 绕过安全/Root检测
 - ✅ 自动同意隐私协议
+- ✅ 拦截版本更新提示
 
 ## 截图
 
@@ -43,13 +44,29 @@
 2. 通过Hook `android.provider.Settings.Secure.getInt` 方法绕过开发者选项检测
 3. 通过延迟Hook `i0.b` 等安全检测类绕过应用加固的安全检测
 4. 拦截 `System.exit()` 调用，防止应用崩溃退出
+5. 拦截 `com.bxkj.student.common.versionupdate.a` 类的 `d()` 方法阻止更新弹窗
 
 ### 技术细节
 
 模块针对应用的加固特性采用了延迟Hook策略：
 - 立即Hook系统关键类（如`Debug.isDebuggerConnected`）
-- 延迟3秒后Hook加固部分（i0包下的类）
+- 延迟Hook加固部分（i0包下的类与版本更新相关类）
 - 采用失败重试机制提高成功率
+
+## 更新日志
+
+### v2.0
+- 新增: 拦截应用版本更新提示功能
+- 优化: 改进延迟Hook机制，提高稳定性
+- 修复: 修复部分设备上可能出现的兼容性问题
+
+### v1.0
+- 首次发布
+- 跳过启动页广告
+- 绕过开发者选项检测
+- 防止应用崩溃退出
+- 绕过安全/Root检测
+- 自动同意隐私协议
 
 ## 开发
 
@@ -84,23 +101,6 @@
 ## 免责声明
 
 本模块仅用于学习和研究目的，帮助用户绕过不必要的广告和检测机制。请勿用于商业用途，也不要影响开发者的正常收益。使用本模块所产生的任何后果由用户自行承担。
-
-## 协议
-
-本项目采用 [MIT 许可证](LICENSE)。
-
-## 贡献
-
-欢迎提交Pull Request或Issue来帮助改进这个项目。
-
-## 联系方式
-
-- GitHub：[pansoul](https://github.com/pansoul1)
-
-## 致谢
-
-- [Xposed框架](https://github.com/rovo89/Xposed)
-- [LSPosed](https://github.com/LSPosed/LSPosed)
 
 ## 协议
 
